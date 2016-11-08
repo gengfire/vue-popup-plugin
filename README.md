@@ -1,5 +1,7 @@
+npm install vue-popup-plugin
+
 ```javascript
-import {Tips, Loading, AlertBox} from './popup/index';
+import {Tips, Loading, AlertBox} from 'vue-popup-plugin';
 Vue.use(Tips);
 Vue.use(Loading);
 Vue.use(AlertBox);
