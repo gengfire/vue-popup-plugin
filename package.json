@@ -1,6 +1,6 @@
 {
   "name": "vue-popup-plugin",
-  "version": "1.2.2",
+  "version": "1.2.4",
   "description": "vue popup alert tips loading",
   "main": "index.js",
   "scripts": {
