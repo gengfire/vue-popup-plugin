@@ -1,6 +1,6 @@
 {
   "name": "vue-popup-plugin",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "vue popup alert tips loading",
   "main": "index.js",
   "scripts": {
@@ -18,9 +18,9 @@
   "author": "gengfire",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gengfire/popup/issues"
+    "url": "https://github.com/gengfire/vue-popup-plugin/issues"
   },
-  "homepage": "https://github.com/gengfire/popup#readme",
+  "homepage": "https://github.com/gengfire/vue-popup-plugin#readme",
   "devDependencies": {
     "babel-core": "^6.1.2",
     "babel-loader": "^6.1.0",

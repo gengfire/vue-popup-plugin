@@ -28,16 +28,6 @@ gulp.task('webpack',['clean'], function(cb) {
 });
 
 /** 
- *  压缩css文件
- */
-gulp.task('style',function() {
-    gulp.src('./dist/style.css')
-    .pipe(rename({suffix:'.min'}))
-    .pipe(minifycss())
-    .pipe(gulp.dest('dist'));
-});
-
-/** 
  *  压缩js文件
  */
 gulp.task('script',function(){
@@ -49,5 +39,5 @@ gulp.task('script',function(){
 
 gulp.task('default', ['webpack'], function() {
     console.log(process.env.NODE_ENV);
-    gulp.start('style','script')
+    gulp.start('script')
 })
