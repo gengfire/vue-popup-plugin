@@ -9,33 +9,37 @@ module.exports = {
     debug: true,
     entry: './src/index',
     output: {
-        path: __dirname + '/dist/',
-        filename: 'build.js',
-        publicPath: "/dist/",
-        chunkFilename:"[id].build.js?[chunkhash]"
+        path: __dirname + "/dist/",
+        filename: 'index.js',
+        libraryTarget: 'umd'
     },
     module: {
         loaders: [{
             test: /\.vue$/,
-            loader: 'vue-loader',
-        },{
+            loader: 'vue-loader'
+        }, {
             test: /\.js$/,
             exclude: /node_modules|vue\/dist/,
-            loader: 'babel'
+            loader: 'babel-loader',
+            query: {
+              presets: [ 'es2015' ]
+            }
         }]
     },
     babel: {
-        "presets": [
-          ["es2015", {"loose": true, "spec": true}]
+        presets: [
+            ["es2015", {
+                "loose": true,
+                "spec": true,
+                // "modules": false
+            }]
         ],
         plugins: ['transform-runtime']
     },
     resolve: {
-        // require时省略的扩展名，如：require('module') 不需要module.js
         extension: ['', '.js'],
-        //别名
-        alias: {}
     },
-    plugins: [],
-    devtool: '#source-map'
+    plugins: [
+        new webpack.optimize.UglifyJsPlugin()
+    ],
 };

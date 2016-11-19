@@ -15,7 +15,11 @@ this.$loading(); //show it
 this.$loading(1); //close it
 
 //alert
-this.$alert('content', 'title', ['ok', 'cancel'], function(){  //content is needed
+this.$alert('content', 'title', ['cancel', 'confirm'], function(){  //content is needed
+    //when click confirm btn
+});
+
+this.$alert('content', ['ok'], function(){  //content is needed
     //when click ok btn
 });
 ```

@@ -6,14 +6,12 @@
 .ui-alertbox .ui-alertbox-desc{font-size:.12rem;padding:.08rem .14rem;line-height:1.5em;word-break:break-all;}
 .ui-alertbox .alert-btn{line-height:2.6em;border-top:1px solid #d8d8d8;}
 .ui-alertbox .alert-btn>div{width:100%;}
-.ui-alertbox .alert-btn>div:nth-of-type(1){font-weight:bold;color:#1290ff;}
+.ui-alertbox .alert-btn>div:last-child{font-weight:bold;color:#1290ff;}
 .ui-alertbox .alert-btn>div:nth-of-type(2){border-left:1px solid #d8d8d8;}
-
+.box{display: -webkit-box;display: flex;}
 .scale-enter-active{animation:scaleIn .4s ease;}
 .scale-leave-active{animation:scaleOut .3s ease;}
-
 .fade-enter-active{animation:fadein .6s ease;}
-
 @keyframes scaleIn{
   from {transform:scale(.5);opacity:0;}
   to {transform:scale(1);opacity:1;}
@@ -37,8 +35,8 @@
               {{content}}
             </p>
             <div class="alert-btn box">
-              <div class="ok" @click="close(1)">{{confirm}}</div>
               <div class="cencel" @click="close(2)" v-if="cancel">{{cancel}}</div>
+              <div class="ok" @click="close(1)">{{confirm}}</div>
             </div>
           </div>
         </div>

@@ -52,8 +52,8 @@ module.exports = {
         if (typeof v === 'function') {
           callback = v;
         } else if (typeof v === 'object') {
-          confirm = v[0];
-          cancel = v[1];
+          confirm = v.pop();
+          cancel = v[0];
         } else {
           title = v;
         }
@@ -68,7 +68,7 @@ module.exports = {
           confirm: confirm,
           cancel: cancel,
           onHide: (index) => {
-            if (index ===1) callback && callback();
+            if (index === 1) callback && callback();
             alertBox.hide(id);
           }
         }
